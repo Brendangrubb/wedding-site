@@ -1,0 +1,10 @@
+nav {
+  background-color: rgba(2,118,253,.3);
+  border-bottom: 3px solid rgb(253,137,2);
+  padding: 20px;
+}
+
+.nav.navbar-nav li a {
+    color: white;
+    font-size: 2.5em;
+}
