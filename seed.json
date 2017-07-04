@@ -1,17 +1,22 @@
-{ "guests": [{
-    "name": "Joe Blow",
-    "rsvp": "yes",
-    "guests": 1,
-    "id": "1"
-    }, {
-      "name": "Slim Jim",
-      "rsvp": "yes",
-      "guests": "0",
-      "id": "2"
-      }, {
-        "name": "Blonde John",
-        "rsvp": "no",
-        "guests": 0,
-        "id": "3"
-  }]
+{ "guests":
+  [
+    {
+      "guestName": "Joe Blow",
+      "attending": "1",
+      "plusOne": "1",
+      "notes": "There better be gluten free food there!"
+    },
+    {
+      "guestName": "Slick Rick",
+      "attending": "1",
+      "plusOne": "0",
+      "notes": "I hope you choke on your happiness."
+    },
+    {
+      "guestName": "Harry Gary",
+      "attending": "0",
+      "plusOne": "0",
+      "notes": "Can't make it, sorry cool dudes!"
+    }
+  ]
 }
