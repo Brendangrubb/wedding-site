@@ -1,0 +1,17 @@
+{ "guests": [{
+    "name": "Joe Blow",
+    "rsvp": "yes",
+    "guests": 1,
+    "id": "1"
+    }, {
+      "name": "Slim Jim",
+      "rsvp": "yes",
+      "guests": "0",
+      "id": "2"
+      }, {
+        "name": "Blonde John",
+        "rsvp": "no",
+        "guests": 0,
+        "id": "3"
+  }]
+}
