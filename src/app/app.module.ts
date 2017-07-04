@@ -9,13 +9,15 @@ import { routing } from './app.routing';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { HeroComponent } from './hero/hero.component';
 import { WeddingDetailsComponent } from './wedding-details/wedding-details.component';
+import { RsvpComponent } from './rsvp/rsvp.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavBarComponent,
     HeroComponent,
-    WeddingDetailsComponent
+    WeddingDetailsComponent,
+    RsvpComponent
   ],
   imports: [
     BrowserModule,

@@ -1,16 +1,24 @@
-.wedding-details {
+.rsvp {
   width: 85vw;
   height: 75vh;
+  overflow: scroll;
   background-color: rgba(2,118,253,.3);
   border: 5px solid rgb(253,137,2);
   border-radius: 10px;
 }
 
-.wedding-details-text {
+.rsvp-text {
   text-align: center;
   margin-top: 10%;
 }
 
-.text-one a {
-  color: black;
+.form-width {
+  margin-left: 25%;
+  max-width: 50%;
+}
+
+.btn {
+  background-color: rgb(253,137,2);
+  min-width: 15%;
+  padding: 15px;
 }

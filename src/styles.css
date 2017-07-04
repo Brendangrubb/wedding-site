@@ -9,3 +9,16 @@ app-root {
   align-items:center;
   justify-content: center;
 }
+
+.text-one {
+  font-size: 4.2em;
+}
+
+.text-two {
+  font-size: 2.5em;
+}
+
+.text-three {
+  font-size: 2em;
+
+}
