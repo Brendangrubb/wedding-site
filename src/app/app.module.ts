@@ -10,6 +10,7 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { HeroComponent } from './hero/hero.component';
 import { WeddingDetailsComponent } from './wedding-details/wedding-details.component';
 import { RsvpComponent } from './rsvp/rsvp.component';
+import { TravelComponent } from './travel/travel.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { RsvpComponent } from './rsvp/rsvp.component';
     NavBarComponent,
     HeroComponent,
     WeddingDetailsComponent,
-    RsvpComponent
+    RsvpComponent,
+    TravelComponent
   ],
   imports: [
     BrowserModule,
