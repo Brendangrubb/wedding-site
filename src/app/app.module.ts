@@ -4,19 +4,24 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
+import { routing } from './app.routing';
+
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { HeroComponent } from './hero/hero.component';
+import { WeddingDetailsComponent } from './wedding-details/wedding-details.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavBarComponent,
-    HeroComponent
+    HeroComponent,
+    WeddingDetailsComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    routing
   ],
   providers: [],
   bootstrap: [AppComponent]

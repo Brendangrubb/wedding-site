@@ -1,7 +1,8 @@
 nav {
   background-color: rgba(2,118,253,.3);
-  border-bottom: 3px solid rgb(253,137,2);
+  border-bottom: 5px solid rgb(253,137,2);
   padding: 20px;
+  margin-bottom: 4%;
 }
 
 .nav.navbar-nav li a {
