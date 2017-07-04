@@ -5,6 +5,7 @@
   background-color: rgba(2,118,253,.3);
   border: 5px solid rgb(253,137,2);
   border-radius: 10px;
+  box-shadow: 5px 5px 8px;
 }
 
 .rsvp-text {

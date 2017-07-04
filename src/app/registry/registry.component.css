@@ -1,4 +1,4 @@
-.travel {
+.registry {
   width: 85vw;
   height: 75vh;
   overflow: scroll;
@@ -8,7 +8,7 @@
   box-shadow: 5px 5px 8px;
 }
 
-.travel-text {
+.registry-text {
   text-align: center;
   margin: 1% 3% 1% 3%;
 }

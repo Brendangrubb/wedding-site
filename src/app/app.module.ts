@@ -16,6 +16,7 @@ import { WeddingDetailsComponent } from './wedding-details/wedding-details.compo
 import { RsvpComponent } from './rsvp/rsvp.component';
 import { TravelComponent } from './travel/travel.component';
 import { PortlandComponent } from './portland/portland.component';
+import { RegistryComponent } from './registry/registry.component';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -32,7 +33,8 @@ export const firebaseConfig = {
     WeddingDetailsComponent,
     RsvpComponent,
     TravelComponent,
-    PortlandComponent
+    PortlandComponent,
+    RegistryComponent
   ],
   imports: [
     BrowserModule,

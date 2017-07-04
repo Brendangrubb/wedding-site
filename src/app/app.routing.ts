@@ -5,6 +5,7 @@ import { HeroComponent } from './hero/hero.component';
 import { RsvpComponent } from './rsvp/rsvp.component';
 import { TravelComponent } from './travel/travel.component';
 import { PortlandComponent} from './portland/portland.component';
+import { RegistryComponent } from './registry/registry.component';
 
 const appRoutes: Routes = [
   {
@@ -26,6 +27,10 @@ const appRoutes: Routes = [
   {
     path: 'portland',
     component: PortlandComponent
+  },
+  {
+    path: 'registry',
+    component: RegistryComponent
   }
 ];
 
