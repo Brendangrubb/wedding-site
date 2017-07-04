@@ -1,27 +1,44 @@
 <div class="center">
   <div class="rsvp">
     <div class="rsvp-text">
-      <p class="text-two">Please RSVP for Every Adult Member of Your Party</p>
+      <p class="text-one">RSVP</p>
       <br><br>
         <form class="text-three" action="index.html" method="post">
           <div class="form-group">
             <label for="name"><u>Please Enter Your Name</u></label>
-            <input id="name" type="text" class="form-width form-control">
+            <input id="name" type="text" class="form-width form-control" required>
           </div>
           <br>
-          <div class="radios">
-            <label for=""><u>Can You Attend?</u></label>
-            <div class="form-check">
-              <label class="form-check-label">
-                <input class="form-check-input" type="radio" name="rsvp" value="yes" checked>
-                Yes, I will be attending your wedding!
-              </label>
+          <div class="row">
+            <div class="col-md-6 radios">
+                <label for=""><u>Can You Attend?</u></label>
+                <div class="form-check">
+                  <label class="form-check-label">
+                    <input class="form-check-input" type="radio" name="rsvp" value="yes" checked>
+                    Yes, I will be attending your wedding!
+                  </label>
+                </div>
+                <div class="form-check">
+                  <label class="form-check-label">
+                    <input class="form-check-input" type="radio" name="rsvp" value="no">
+                    No, unfortunately I can't make it.
+                  </label>
+                </div>
             </div>
-            <div class="form-check">
-              <label class="form-check-label">
-                <input class="form-check-input" type="radio" name="rsvp" value="no">
-                No, unfortunately I can't make it.
-              </label>
+            <div class="col-md-6 radios">
+              <label for=""><u>Are You Brining a Guest?</u></label>
+              <div class="form-check">
+                <label class="form-check-label">
+                  <input class="form-check-input" type="radio" name="guest" value="yes">
+                  Yep
+                </label>
+              </div>
+              <div class="form-check">
+                <label class="form-check-label">
+                  <input class="form-check-input" type="radio" name="guest" value="no" checked>
+                  Nope
+                </label>
+              </div>
             </div>
           </div>
           <br><br>
