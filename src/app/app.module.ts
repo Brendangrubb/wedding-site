@@ -11,6 +11,7 @@ import { HeroComponent } from './hero/hero.component';
 import { WeddingDetailsComponent } from './wedding-details/wedding-details.component';
 import { RsvpComponent } from './rsvp/rsvp.component';
 import { TravelComponent } from './travel/travel.component';
+import { PortlandComponent } from './portland/portland.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { TravelComponent } from './travel/travel.component';
     HeroComponent,
     WeddingDetailsComponent,
     RsvpComponent,
-    TravelComponent
+    TravelComponent,
+    PortlandComponent
   ],
   imports: [
     BrowserModule,

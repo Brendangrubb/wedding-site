@@ -4,6 +4,7 @@ import { WeddingDetailsComponent } from './wedding-details/wedding-details.compo
 import { HeroComponent } from './hero/hero.component';
 import { RsvpComponent } from './rsvp/rsvp.component';
 import { TravelComponent } from './travel/travel.component';
+import { PortlandComponent} from './portland/portland.component';
 
 const appRoutes: Routes = [
   {
@@ -21,6 +22,10 @@ const appRoutes: Routes = [
   {
     path: 'travel',
     component: TravelComponent
+  },
+  {
+    path: 'portland',
+    component: PortlandComponent
   }
 ];
 
