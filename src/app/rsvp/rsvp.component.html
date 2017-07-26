@@ -3,25 +3,36 @@
     <div class="rsvp-text">
       <p class="text-one"><u>RSVP</u></p>
         <form class="text-three">
-          <div class="form-group">
-            <label for="rsvpName"><u>Please Enter Your Name</u></label>
-            <input #rsvpName id="rsvpName" type="text" class="form-width form-control" required>
+
+          <div class="row">
+            <div class="col-md-6 form-group">
+              <label for="rsvpName"><u>Please Enter Your Name</u></label>
+              <input #rsvpName id="rsvpName" type="text" class="form-width form-control" required>
+            </div>
+            <div class="col-md-6 form-group">
+              <label for="rsvpEmail"><u>Please Enter Your Email</u></label>
+              <input #rsvpEmail id="rsvpEmail" type="email" class="form-width form-control" required>
+            </div>
           </div>
 
           <div class="row">
             <div class="col-md-6 radios">
               <label for="rsvpAttend"><u>Can You Attend?</u></label>
-              <select #rsvpAttend class="form-control" id="rsvpAttend">
-                <option value="yes">Yes, I will be attending your wedding!</option>
-                <option value="no">No, unfortunately I can't make it.</option>
-              </select>
+              <div class="center">
+                <select #rsvpAttend class="form-control select-boxes" id="rsvpAttend">
+                  <option value="yes">Yes, I will be attending your wedding!</option>
+                  <option value="no">No, unfortunately I can't make it.</option>
+                </select>
+              </div>
             </div>
             <div class="col-md-6 radios">
               <label for="rsvpBringGuest"><u>Are You Brining a Guest?</u></label>
-              <select #rsvpBringGuest class="form-control" id="rsvpBringGuest">
-                <option value="yes">Yep</option>
-                <option value="no">Nope</option>
-              </select>
+              <div class="center">
+                <select #rsvpBringGuest class="form-control select-boxes" id="rsvpBringGuest">
+                  <option value="yes">Yep I sure am</option>
+                  <option value="no">Nope, I'm not</option>
+                </select>
+              </div>
             </div>
           </div>
 
