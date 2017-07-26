@@ -22,3 +22,7 @@ app-root {
   font-size: 2em;
 
 }
+
+.nav-buffer {
+  height: 20vh;
+}

@@ -26,3 +26,20 @@ Before running the tests make sure you are serving the app via `ng serve`.
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+
+Guest User Story
+  As a guest, I can...
+    - RSVP to the wedding
+    - indicate whether I am brining a guest
+    - give specific instructions regarding my attendance
+    - login to my account to...
+      - see my RSVP status, guest status and specific instructions
+    - post to a wall to interact publicly with other guests and the bride and groom
+
+
+Admin User Story
+  As an admin I can...
+    - Check a page which lists the RSVP status
+    - Delete guests from the RSVP status page
+    - Delete comments on the wall
