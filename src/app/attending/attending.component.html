@@ -4,6 +4,7 @@
   <thead>
     <tr>
       <th>Guest</th>
+      <th>Email</th>
       <th>Attending</th>
       <th>Guest</th>
       <th>Info</th>
@@ -11,6 +12,7 @@
   </thead>
   <tr *ngFor="let guest of guests | async">
     <td>{{guest.rsvpName}}</td>
+    <td>{{guest.rsvpEmail}}</td>
     <td>{{guest.rsvpAttend}}</td>
     <td>{{guest.rsvpBringGuest}}</td>
     <td>{{guest.rsvpAnythingElse}}</td>

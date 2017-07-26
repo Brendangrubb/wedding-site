@@ -20,8 +20,8 @@ export class RsvpComponent implements OnInit {
   guests: FirebaseListObservable<any[]>;
 
 
-  submitForm(rsvpName: string, rsvpAttend: string, rsvpBringGuest: string, rsvpAnythingElse: string) {
-    var newGuest: Guest = new Guest(rsvpName, rsvpAttend, rsvpBringGuest, rsvpAnythingElse);
+  submitForm(rsvpName: string, rsvpEmail: string, rsvpAttend: string, rsvpBringGuest: string, rsvpAnythingElse: string) {
+    var newGuest: Guest = new Guest(rsvpName, rsvpEmail, rsvpAttend, rsvpBringGuest, rsvpAnythingElse);
     this.guestService.addGuest(newGuest);
   }
 
