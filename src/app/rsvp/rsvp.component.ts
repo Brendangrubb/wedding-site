@@ -32,11 +32,12 @@ export class RsvpComponent implements OnInit {
   }
 
   submitForm(rsvpName: string, rsvpEmail: string, rsvpPassword: string, rsvpAttend: string, rsvpBringGuest: string, rsvpAnythingElse: string) {
-    var newGuest: Guest = new Guest(rsvpName, rsvpEmail, rsvpAttend, rsvpBringGuest, rsvpAnythingElse);
-
-    this.guestService.addGuest(newGuest);
-
-    this.afAuth.auth.createUserWithEmailAndPassword(rsvpEmail, rsvpPassword);
+    this.afAuth.auth.createUserWithEmailAndPassword(rsvpEmail, rsvpPassword)
+    .then( () => {
+      var uid = this.afAuth.auth.currentUser.uid;
+      var newGuest: Guest = new Guest(rsvpName, rsvpEmail, rsvpAttend, rsvpBringGuest, rsvpAnythingElse, uid);
+      this.guestService.addGuest(newGuest);
+    })
 
   }
 

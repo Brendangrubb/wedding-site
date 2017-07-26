@@ -5,6 +5,7 @@ export class Guest {
     public rsvpEmail: string,
     public rsvpAttend: string,
     public rsvpBringGuest: string,
-    public rsvpAnythingElse: string
+    public rsvpAnythingElse: string,
+    public uid: string
   ) { }
 }
