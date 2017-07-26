@@ -10,8 +10,13 @@
               <input #rsvpName id="rsvpName" type="text" class="form-width form-control" required>
             </div>
             <div class="col-md-6 form-group">
-              <label for="rsvpEmail"><u>Please Enter Your Email</u></label>
-              <input #rsvpEmail id="rsvpEmail" type="email" class="form-width form-control" required>
+              <label for="rsvpEmail"><u>Please Enter Your Email and a Password</u></label>
+              <div class="col-md-6">
+                <input #rsvpEmail id="rsvpEmail" type="email" class="form-control" placeholder="email@email.com" required>
+              </div>
+              <div class="col-md-6">
+                <input #rsvpPassword id="rsvpPassword" type="password" class="form-control" placeholder="password" required>
+              </div>
             </div>
           </div>
 
@@ -41,7 +46,7 @@
             <textarea #rsvpAnythingElse id="rsvpAnythingElse" type="text" rows="4" class="form-width form-control"></textarea>
           </div>
           <br>
-          <button class="btn btn-lg" type="submit" name="button" (click)="submitForm(rsvpName.value, rsvpEmail.value, rsvpAttend.value, rsvpBringGuest.value, rsvpAnythingElse.value)">Submit!</button>
+          <button class="btn btn-lg" type="submit" name="button" (click)="submitForm(rsvpName.value, rsvpEmail.value,rsvpPassword.value, rsvpAttend.value, rsvpBringGuest.value, rsvpAnythingElse.value)">Submit!</button>
         </form>
         <br><br><br>
 
