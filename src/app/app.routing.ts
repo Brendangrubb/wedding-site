@@ -7,6 +7,7 @@ import { TravelComponent } from './travel/travel.component';
 import { PortlandComponent} from './portland/portland.component';
 import { RegistryComponent } from './registry/registry.component';
 import { AttendingComponent } from './attending/attending.component';
+import { SigninComponent } from './signin/signin.component';
 
 const appRoutes: Routes = [
   {
@@ -36,6 +37,10 @@ const appRoutes: Routes = [
   {
     path: 'attending',
     component: AttendingComponent
+  },
+  {
+    path: "signin",
+    component: SigninComponent
   }
 ];
 

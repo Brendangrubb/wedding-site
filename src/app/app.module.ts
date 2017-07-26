@@ -18,6 +18,7 @@ import { TravelComponent } from './travel/travel.component';
 import { PortlandComponent } from './portland/portland.component';
 import { RegistryComponent } from './registry/registry.component';
 import { AttendingComponent } from './attending/attending.component';
+import { SigninComponent } from './signin/signin.component';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -36,7 +37,8 @@ export const firebaseConfig = {
     TravelComponent,
     PortlandComponent,
     RegistryComponent,
-    AttendingComponent
+    AttendingComponent,
+    SigninComponent
   ],
   imports: [
     BrowserModule,
