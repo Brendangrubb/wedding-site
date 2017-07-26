@@ -8,22 +8,15 @@ import { ActivatedRoute, Params } from '@angular/router';
 import { Location } from '@angular/common';
 import { Router } from '@angular/router';
 
+
 @Component({
-  selector: 'app-rsvp',
-  templateUrl: './rsvp.component.html',
-  styleUrls: ['./rsvp.component.css'],
+  selector: 'app-attending',
+  templateUrl: './attending.component.html',
+  styleUrls: ['./attending.component.css'],
   providers: [GuestService]
 })
-
-
-export class RsvpComponent implements OnInit {
+export class AttendingComponent implements OnInit {
   guests: FirebaseListObservable<any[]>;
-
-
-  submitForm(rsvpName: string, rsvpAnythingElse: string) {
-    var newGuest: Guest = new Guest(rsvpName, rsvpAnythingElse);
-    this.guestService.addGuest(newGuest);
-  }
 
   constructor(private router: Router, private location: Location, private guestService: GuestService) { }
 
