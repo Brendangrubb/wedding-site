@@ -4,11 +4,15 @@
   <thead>
     <tr>
       <th>Guest</th>
+      <th>Attending</th>
+      <th>Guest</th>
       <th>Info</th>
     </tr>
   </thead>
   <tr *ngFor="let guest of guests | async">
     <td>{{guest.rsvpName}}</td>
+    <td>{{guest.rsvpAttend}}</td>
+    <td>{{guest.rsvpBringGuest}}</td>
     <td>{{guest.rsvpAnythingElse}}</td>
   </tr>
 </table>
