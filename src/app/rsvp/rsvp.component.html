@@ -7,44 +7,30 @@
             <label for="rsvpName"><u>Please Enter Your Name</u></label>
             <input #rsvpName id="rsvpName" type="text" class="form-width form-control" required>
           </div>
-          <!-- <div class="row">
+
+          <div class="row">
             <div class="col-md-6 radios">
-                <label for="rsvpAttend"><u>Can You Attend?</u></label>
-                <div class="form-check">
-                  <label class="form-check-label">
-                    <input class="form-check-input" type="radio" name="rsvp" value="yes" checked>
-                    Yes, I will be attending your wedding!
-                  </label>
-                </div>
-                <div class="form-check">
-                  <label class="form-check-label">
-                    <input class="form-check-input" type="radio" name="rsvp" value="no">
-                    No, unfortunately I can't make it.
-                  </label>
-                </div>
+              <label for="rsvpAttend"><u>Can You Attend?</u></label>
+              <select #rsvpAttend class="form-control" id="rsvpAttend">
+                <option value="yes">Yes, I will be attending your wedding!</option>
+                <option value="no">No, unfortunately I can't make it.</option>
+              </select>
             </div>
             <div class="col-md-6 radios">
-              <label for=""><u>Are You Brining a Guest?</u></label>
-              <div class="form-check">
-                <label class="form-check-label">
-                  <input class="form-check-input" type="radio" name="guest" value="yes">
-                  Yep
-                </label>
-              </div>
-              <div class="form-check">
-                <label class="form-check-label">
-                  <input class="form-check-input" type="radio" name="guest" value="no" checked>
-                  Nope
-                </label>
-              </div>
+              <label for="rsvpBringGuest"><u>Are You Brining a Guest?</u></label>
+              <select #rsvpBringGuest class="form-control" id="rsvpBringGuest">
+                <option value="yes">Yep</option>
+                <option value="no">Nope</option>
+              </select>
             </div>
-          </div> -->
+          </div>
+
           <div class="form-group">
             <label for="rsvpAnythingElse"><u>Anything Else?</u></label>
             <textarea #rsvpAnythingElse id="rsvpAnythingElse" type="text" rows="4" class="form-width form-control"></textarea>
           </div>
           <br>
-          <button class="btn btn-lg" type="submit" name="button" (click)="submitForm(rsvpName.value,rsvpAnythingElse.value)">Submit!</button>
+          <button class="btn btn-lg" type="submit" name="button" (click)="submitForm(rsvpName.value, rsvpAttend.value, rsvpBringGuest.value, rsvpAnythingElse.value)">Submit!</button>
         </form>
         <br><br><br>
 
