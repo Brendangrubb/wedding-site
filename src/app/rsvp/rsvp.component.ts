@@ -22,7 +22,6 @@ export class RsvpComponent implements OnInit {
 
   constructor(
     private router: Router,
-    private location: Location,
     private guestService: GuestService,
     private afAuth: AngularFireAuth
   ) { }
