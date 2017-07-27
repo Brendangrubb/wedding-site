@@ -3,7 +3,7 @@
     <div class="signin-text">
       <br><br>
       <p class="text-one"><u>Log In</u></p>
-      <form>
+      <div>
         <div class="form-group">
           <label for="loginEmail">Enter Your Email Adress</label>
           <input #loginEmail type="email" class="form-control" id="loginEmail">
@@ -13,7 +13,7 @@
           <input #loginPassword type="password" class="form-control" id="loginPassword">
         </div>
         <button (click)="logIn(loginEmail.value, loginPassword.value)" type="button" class="btn">Submit</button>
-      </form>
+      </div>
     </div>
   </div>
 </div>

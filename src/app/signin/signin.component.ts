@@ -5,7 +5,7 @@ import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { AngularFireAuth } from 'angularfire2/auth';
 import { FirebaseListObservable } from 'angularfire2/database';
-import { FirebaseObjectObservable } from 'angularfire';
+import { FirebaseObjectObservable } from 'angularfire2/database';
 import { ActivatedRoute, Params } from '@angular/router';
 import { Location } from '@angular/common';
 import { Router } from '@angular/router';
@@ -18,22 +18,25 @@ import { Router } from '@angular/router';
 })
 
 export class SigninComponent implements OnInit {
+  // guest: Observable<firebase.Guest>;
+
   constructor(
     private guestService: GuestService,
     private afAuth: AngularFireAuth,
-    // THIS
+// CHECK HERE
     private afdb: AngularFireDatabaseModule,
     private router: Router
-  ) { }
+  ) {
+    // this.guest = afAuth.authState;
+  }
 
   ngOnInit() {
   }
 
-// AND THIS, ATTEMPTING TO PROVE LOGIN WITH CONSOLE LOG
   logIn(loginEmail:string, loginPassword:string) {
     this.afAuth.auth.signInWithEmailAndPassword(loginEmail, loginPassword)
     .then( () => {
-      console.log(this.afdb.);
+      console.log(this.afAuth.auth.currentUser);
     })
   }
 
