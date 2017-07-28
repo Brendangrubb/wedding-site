@@ -10,6 +10,8 @@ import { ActivatedRoute, Params } from '@angular/router';
 import { Location } from '@angular/common';
 import { Router } from '@angular/router';
 import { Observable } from 'rxjs/Observable';
+import { LocalStorageService, SessionStorageService } from 'ng2-webstorage';
+
 
 
 @Component({
@@ -22,6 +24,7 @@ import { Observable } from 'rxjs/Observable';
 export class SigninComponent implements OnInit {
   guests: FirebaseListObservable<any[]>;
   guest: FirebaseObjectObservable<any[]>;
+  currentGuest;
   rsvpName;
 
 
@@ -29,7 +32,8 @@ export class SigninComponent implements OnInit {
     private guestService: GuestService,
     private afAuth: AngularFireAuth,
     private afdb: AngularFireDatabase,
-    private router: Router
+    private router: Router,
+    private storage: LocalStorageService
   ) {
     // this.guest = afdb.object('/guest' + this.uid);
   }
@@ -50,8 +54,8 @@ export class SigninComponent implements OnInit {
 
       currentGuests.subscribe(eventEmitterData => {
         var data = eventEmitterData;
-
-        console.log(data);
+        this.storage.store('currentGuestObject', data[0]);
+        console.log(data[0]);
       })
     })
   }

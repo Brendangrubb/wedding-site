@@ -20,6 +20,9 @@ import { RegistryComponent } from './registry/registry.component';
 import { AttendingComponent } from './attending/attending.component';
 import { SigninComponent } from './signin/signin.component';
 
+import {Ng2Webstorage} from 'ng2-webstorage';
+
+
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
   authDomain: masterFirebaseConfig.authDomain,
@@ -46,7 +49,8 @@ export const firebaseConfig = {
     HttpModule,
     routing,
     AngularFireModule.initializeApp(firebaseConfig),
-    AngularFireDatabaseModule
+    AngularFireDatabaseModule,
+    Ng2Webstorage
   ],
   providers: [],
   bootstrap: [AppComponent]
