@@ -9,6 +9,7 @@ import { LocalStorageService, LocalStorage } from 'ng2-webstorage';
 })
 export class NavBarComponent implements OnInit {
   currentGuest;
+  guestName;
 
   constructor(
     private storage: LocalStorageService
@@ -18,6 +19,11 @@ export class NavBarComponent implements OnInit {
   ngOnInit() {
     this.currentGuest = this.storage.retrieve('currentGuestObject');
     console.log(this.currentGuest);
+    this.guestName = this.currentGuest.rsvpName;
+  }
+
+  logOff() {
+    this.storage.clear('currentGuestObject');
   }
 
 }

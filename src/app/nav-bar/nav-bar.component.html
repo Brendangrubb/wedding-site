@@ -22,7 +22,13 @@
         <li><a href="/portland">Portland</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="/signin">Sign In</a></li>
+        <div *ngIf="guestName">
+          <li class="loginName">Hey {{guestName}}!</li>
+          <li (click)="logOff()">Logout</li>
+        </div>
+        <div *ngIf="!guestName">
+          <li><a href="/signin">Sign In</a></li>
+        </div>
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->

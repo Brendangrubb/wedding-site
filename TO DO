@@ -16,7 +16,6 @@
 -Final Stuff
   -Write Readme w/ user stories / install instructions / remember gitignore
   -Host
-  -Print business cards and resumés
 
 
 DONE
@@ -25,3 +24,4 @@ DONE
 - Take Form Inputs
 - Add Input To Database
 - Add login
+-Print business cards and resumés
