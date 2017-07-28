@@ -44,7 +44,7 @@ export class RsvpComponent implements OnInit {
       this.guestService.addGuest(newGuest);
     })
     .then( () => {
-      this.router.navigate(['/registered']);
+      this.router.navigate(['registered']);
     });
 
   }
