@@ -1,8 +1,6 @@
 -Harder Stuff
-  -Add login
   -Add dynamic routing so user can see profile
   -Add admin page
-    -Pipe for those brining guests?
 
 -Easier Stuff
   -Add text and internal link to registry page
@@ -24,6 +22,6 @@
 DONE
 - RSVP add bringing a guest
 - Create class
-
 - Take Form Inputs
 - Add Input To Database
+- Add login

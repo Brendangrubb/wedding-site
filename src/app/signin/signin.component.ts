@@ -5,10 +5,12 @@ import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { AngularFireAuth } from 'angularfire2/auth';
 import { FirebaseListObservable } from 'angularfire2/database';
-import { FirebaseObjectObservable } from 'angularfire2/database';
+import { AngularFireDatabase, FirebaseObjectObservable } from 'angularfire2/database';
 import { ActivatedRoute, Params } from '@angular/router';
 import { Location } from '@angular/common';
 import { Router } from '@angular/router';
+import { Observable } from 'rxjs/Observable';
+
 
 @Component({
   selector: 'app-signin',
@@ -18,16 +20,18 @@ import { Router } from '@angular/router';
 })
 
 export class SigninComponent implements OnInit {
-  // guest: Observable<firebase.Guest>;
+  guests: FirebaseListObservable<any[]>;
+  guest: FirebaseObjectObservable<any[]>;
+  rsvpName;
+
 
   constructor(
     private guestService: GuestService,
     private afAuth: AngularFireAuth,
-// CHECK HERE
-    private afdb: AngularFireDatabaseModule,
+    private afdb: AngularFireDatabase,
     private router: Router
   ) {
-    // this.guest = afAuth.authState;
+    // this.guest = afdb.object('/guest' + this.uid);
   }
 
   ngOnInit() {
@@ -36,12 +40,19 @@ export class SigninComponent implements OnInit {
   logIn(loginEmail:string, loginPassword:string) {
     this.afAuth.auth.signInWithEmailAndPassword(loginEmail, loginPassword)
     .then( () => {
-      console.log(this.afAuth.auth.currentUser);
+      let uid = this.afAuth.auth.currentUser.uid;
+      let currentGuests = this.afdb.list('/guests', {
+        query: {
+          orderByChild: 'uid',
+          equalTo: uid
+        }
+      });
+
+      currentGuests.subscribe(eventEmitterData => {
+        var data = eventEmitterData;
+
+        console.log(data);
+      })
     })
   }
-
-      // .then(function(userCredential) {
-      //   console.log(userCredential.additionalUserInfo.username);
-      // });
-
 }

@@ -18,7 +18,11 @@ import { Router } from '@angular/router';
 export class AttendingComponent implements OnInit {
   guests: FirebaseListObservable<any[]>;
 
-  constructor(private router: Router, private location: Location, private guestService: GuestService) { }
+  constructor(
+    private router: Router,
+    private location: Location,
+    private guestService: GuestService
+  ) { }
 
   ngOnInit() {
     this.guests = this.guestService.getGuests();
