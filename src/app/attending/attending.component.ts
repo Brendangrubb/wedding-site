@@ -20,6 +20,7 @@ import { LocalStorageService, LocalStorage } from 'ng2-webstorage';
 export class AttendingComponent implements OnInit {
   guests: FirebaseListObservable<any[]>;
   currentGuest;
+  currentName;
 
   constructor(
     private router: Router,
@@ -32,6 +33,8 @@ export class AttendingComponent implements OnInit {
     this.guests = this.guestService.getGuests();
     this.currentGuest = this.storage.retrieve('currentGuestObject');
     console.log(this.currentGuest);
+    this.currentName = this.currentGuest.rsvpName;
+    console.log(this.currentGuest.rsvpName);
   }
 
 }

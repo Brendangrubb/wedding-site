@@ -1,10 +1,8 @@
 -Harder Stuff
-  -Add dynamic routing so user can see profile
   -Add admin page
 
 -Easier Stuff
   -Add text and internal link to registry page
-  -Create post form page with instructions on posting to the wall, logging in, etc
 
 -Style
   -Clean up Portland & travel menus -- add links to content instead of displaying all
@@ -12,6 +10,7 @@
   -Change dinner to "Eating Drinking and Dancing"
   -Go Through and check all page layouts before finished
   -Double check Content
+  -Change anything else text to wall of well wishes text
 
 -Final Stuff
   -Write Readme w/ user stories / install instructions / remember gitignore
@@ -25,3 +24,4 @@ DONE
 - Add Input To Database
 - Add login
 -Print business cards and resumés
+-Add profile page

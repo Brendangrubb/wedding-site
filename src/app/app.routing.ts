@@ -38,7 +38,7 @@ const appRoutes: Routes = [
     component: RegistryComponent
   },
   {
-    path: 'attending',
+    path: 'admin',
     component: AttendingComponent
   },
   {
