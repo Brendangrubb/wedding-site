@@ -56,5 +56,8 @@ export class SigninComponent implements OnInit {
         console.log(data[0]);
       })
     })
+    .then( () => {
+      this.router.navigate(['/']);
+    });
   }
 }

@@ -15,7 +15,6 @@
       <ul class="nav navbar-nav">
         <li><a href="/">Home</a></li>
         <li><a href="/wedding-details">Wedding Details</a></li>
-        <li><a href="/rsvp">RSVP</a></li>
         <li><a href="/attending">Attending</a></li>
         <li><a href="/registry">Registry</a></li>
         <li><a href="/travel">Travel</a></li>
@@ -24,10 +23,10 @@
       <ul class="nav navbar-nav navbar-right">
         <div *ngIf="guestName">
           <li><a href="/profile">Hey {{guestName}}!</a></li>
-          <li (click)="logOff()"><a href="/logoff">Logout</a></li>
+          <li (click)="logOff()"><a href="/logoff"><span class="logoff">Logout</span></a></li>
         </div>
         <div *ngIf="!guestName">
-          <li><a href="/signin">Sign In</a></li>
+          <li><a href="/rsvp">RSVP / </a> <a href="/signin">Sign In</a></li>
         </div>
       </ul>
     </div><!-- /.navbar-collapse -->

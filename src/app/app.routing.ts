@@ -10,6 +10,7 @@ import { AttendingComponent } from './attending/attending.component';
 import { SigninComponent } from './signin/signin.component';
 import { ProfileComponent } from './profile/profile.component';
 import { LogoffComponent } from './logoff/logoff.component';
+import { RegisteredComponent } from './registered/registered.component';
 
 const appRoutes: Routes = [
   {
@@ -51,6 +52,10 @@ const appRoutes: Routes = [
   {
     path: "logoff",
     component: LogoffComponent
+  },
+  {
+    path: "registered",
+    component: RegisteredComponent
   }
 ];
 

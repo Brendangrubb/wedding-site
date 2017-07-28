@@ -43,6 +43,9 @@ export class RsvpComponent implements OnInit {
       var newGuest: Guest = new Guest(rsvpName, rsvpEmail, rsvpAttend, rsvpBringGuest, rsvpAnythingElse, uid);
       this.guestService.addGuest(newGuest);
     })
+    .then( () => {
+      this.router.navigate(['/registered']);
+    });
 
   }
 
