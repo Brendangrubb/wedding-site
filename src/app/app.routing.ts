@@ -9,6 +9,7 @@ import { RegistryComponent } from './registry/registry.component';
 import { AttendingComponent } from './attending/attending.component';
 import { SigninComponent } from './signin/signin.component';
 import { ProfileComponent } from './profile/profile.component';
+import { LogoffComponent } from './logoff/logoff.component';
 
 const appRoutes: Routes = [
   {
@@ -46,6 +47,10 @@ const appRoutes: Routes = [
   {
     path: "profile",
     component: ProfileComponent
+  },
+  {
+    path: "logoff",
+    component: LogoffComponent
   }
 ];
 

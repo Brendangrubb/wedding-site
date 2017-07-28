@@ -24,7 +24,7 @@
       <ul class="nav navbar-nav navbar-right">
         <div *ngIf="guestName">
           <li><a href="/profile">Hey {{guestName}}!</a></li>
-          <li class="logoutButton" (click)="logOff()">Logout</li>
+          <li (click)="logOff()"><a href="/logoff">Logout</a></li>
         </div>
         <div *ngIf="!guestName">
           <li><a href="/signin">Sign In</a></li>

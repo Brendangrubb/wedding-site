@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { LocalStorageService, LocalStorage } from 'ng2-webstorage';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -12,7 +13,8 @@ export class NavBarComponent implements OnInit {
   guestName;
 
   constructor(
-    private storage: LocalStorageService
+    private storage: LocalStorageService,
+    private router: Router
   )
   { }
 
