@@ -21,6 +21,7 @@ import { AttendingComponent } from './attending/attending.component';
 import { SigninComponent } from './signin/signin.component';
 
 import {Ng2Webstorage} from 'ng2-webstorage';
+import { ProfileComponent } from './profile/profile.component';
 
 
 export const firebaseConfig = {
@@ -41,7 +42,8 @@ export const firebaseConfig = {
     PortlandComponent,
     RegistryComponent,
     AttendingComponent,
-    SigninComponent
+    SigninComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,

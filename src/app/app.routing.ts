@@ -8,6 +8,7 @@ import { PortlandComponent} from './portland/portland.component';
 import { RegistryComponent } from './registry/registry.component';
 import { AttendingComponent } from './attending/attending.component';
 import { SigninComponent } from './signin/signin.component';
+import { ProfileComponent } from './profile/profile.component';
 
 const appRoutes: Routes = [
   {
@@ -41,6 +42,10 @@ const appRoutes: Routes = [
   {
     path: "signin",
     component: SigninComponent
+  },
+  {
+    path: "profile",
+    component: ProfileComponent
   }
 ];
 

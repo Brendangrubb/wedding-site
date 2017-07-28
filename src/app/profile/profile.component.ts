@@ -13,20 +13,19 @@ import { Observable } from 'rxjs/Observable';
 import { LocalStorageService, SessionStorageService } from 'ng2-webstorage';
 
 
-
 @Component({
-  selector: 'app-signin',
-  templateUrl: './signin.component.html',
-  styleUrls: ['./signin.component.css'],
+  selector: 'app-profile',
+  templateUrl: './profile.component.html',
+  styleUrls: ['./profile.component.css'],
   providers: [GuestService, AngularFireAuth]
 })
-
-export class SigninComponent implements OnInit {
-  guests: FirebaseListObservable<any[]>;
-  guest: FirebaseObjectObservable<any[]>;
+export class ProfileComponent implements OnInit {
   currentGuest;
   rsvpName;
-
+  rsvpEmail;
+  rsvpAttend;
+  rsvpBringGuest;
+  rsvpAnythingElse;
 
   constructor(
     private guestService: GuestService,
@@ -37,24 +36,13 @@ export class SigninComponent implements OnInit {
   ) { }
 
   ngOnInit() {
+    this.currentGuest = this.storage.retrieve('currentGuestObject');
+    console.log(this.currentGuest);
+    this.rsvpName = this.currentGuest.rsvpName;
+    this.rsvpEmail = this.currentGuest.rsvpEmail;
+    this.rsvpAttend = this.currentGuest.rsvpAttend;
+    this.rsvpBringGuest = this.currentGuest.rsvpBringGuest;
+    this.rsvpAnythingElse = this.currentGuest.rsvpAnythingElse;
   }
 
-  logIn(loginEmail:string, loginPassword:string) {
-    this.afAuth.auth.signInWithEmailAndPassword(loginEmail, loginPassword)
-    .then( () => {
-      let uid = this.afAuth.auth.currentUser.uid;
-      let currentGuests = this.afdb.list('/guests', {
-        query: {
-          orderByChild: 'uid',
-          equalTo: uid
-        }
-      });
-
-      currentGuests.subscribe(eventEmitterData => {
-        var data = eventEmitterData;
-        this.storage.store('currentGuestObject', data[0]);
-        console.log(data[0]);
-      })
-    })
-  }
 }
