@@ -24,6 +24,7 @@ import {Ng2Webstorage} from 'ng2-webstorage';
 import { ProfileComponent } from './profile/profile.component';
 import { LogoffComponent } from './logoff/logoff.component';
 import { RegisteredComponent } from './registered/registered.component';
+import { WellWishesComponent } from './well-wishes/well-wishes.component';
 
 
 export const firebaseConfig = {
@@ -47,7 +48,8 @@ export const firebaseConfig = {
     SigninComponent,
     ProfileComponent,
     LogoffComponent,
-    RegisteredComponent
+    RegisteredComponent,
+    WellWishesComponent
   ],
   imports: [
     BrowserModule,

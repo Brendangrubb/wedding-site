@@ -11,6 +11,7 @@ import { SigninComponent } from './signin/signin.component';
 import { ProfileComponent } from './profile/profile.component';
 import { LogoffComponent } from './logoff/logoff.component';
 import { RegisteredComponent } from './registered/registered.component';
+import { WellWishesComponent } from './well-wishes/well-wishes.component';
 
 const appRoutes: Routes = [
   {
@@ -56,6 +57,10 @@ const appRoutes: Routes = [
   {
     path: "registered",
     component: RegisteredComponent
+  },
+  {
+    path: 'well-wishes',
+    component: WellWishesComponent
   }
 ];
 

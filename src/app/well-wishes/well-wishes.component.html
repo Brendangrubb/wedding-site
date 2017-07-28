@@ -1,0 +1,13 @@
+<div class="center">
+  <div class="well-wishes">
+    <div class="well-wishes-text">
+      <p class="text-one"><u>Wall of Well Wishes</u></p>
+      <br><br>
+
+      <div *ngFor="let guest of guests | async">
+        <p><span class="text-two">{{guest.rsvpName}}  says </span><span class="text-three">"{{guest.rsvpAnythingElse}}"</span></p>
+      </div>
+
+    </div>
+  </div>
+</div>
